@@ -26,6 +26,11 @@ app.configure('production', function(){
 
 // Routes
 
+addHeader = function (req, res, next) {
+  res.header('X-Accel-Buffering', 'no');
+  next();
+}
+
 app.get('/', routes.index);
 
 app.listen(process.env.PORT || 8080, function(){
