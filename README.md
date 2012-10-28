@@ -2,7 +2,8 @@ niconicoAR-server
 ==========
 
 Messageを受け取り、接続しているすべてのクライアントへBroadcastするsocket.ioサーバ。
-Public PaaSで動作できるように、xhr-pollingで動作する。
+
+Public PaaSで動作できるように、xhr-pollingで動作する。([eXcale](www.excale.net) で動作確認) 
 
 License
 -------
