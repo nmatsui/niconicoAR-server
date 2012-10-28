@@ -39,16 +39,14 @@ app.listen(process.env.PORT || 8080, function(){
 
 io.configure(function(){
   io.set("transports", ["xhr-polling"]);
-  io.set("polling duration", 10);
+//  io.set("polling duration", 10);
 });
 
 io.sockets.on('connection', function(socket){
   console.log("client connect");
-  socket.on('sendComment', function(data){
+  socket.on('comment', function(data){
     console.log("receive comment -> %j", data);
-    io.sockets.emit('broadcast', {
-      comment: data.comment
-    });
+    io.sockets.emit('broadcast', data);
   });
   socket.on('disconnect', function(){
     console.log("client disconnect");
