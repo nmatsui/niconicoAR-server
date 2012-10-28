@@ -39,7 +39,7 @@ app.listen(process.env.PORT || 8080, function(){
 
 io.configure(function(){
   io.set("transports", ["xhr-polling"]);
-//  io.set("polling duration", 10);
+  io.set("polling duration", 600);
 });
 
 io.sockets.on('connection', function(socket){
