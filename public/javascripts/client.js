@@ -1,4 +1,5 @@
-var socket = io.connect('http://niconicoar.excale.net', {transports: ["xhr-polling"]});
+var socket = io.connect('http://piyopiyonode.scale-out.in', {transports: ["xhr-polling"]});
+//var socket = io.connect('http://niconicoar.excale.net', {transports: ["xhr-polling"]});
 //var socket = io.connect('http://192.168.1.102:8080', {transports: ["xhr-polling"]});
 //var socket = io.connect('http://niconicoar.herokuapp.com', {transports: ["xhr-polling"]});
 //var socket = io.connect('http://localhost:8080', {transports: ["xhr-polling"]});
