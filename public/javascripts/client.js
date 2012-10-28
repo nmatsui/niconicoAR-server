@@ -4,17 +4,18 @@ var socket = io.connect('http://niconicoar.excale.net', {transports: ["xhr-polli
 
 $(document).ready(function() {
   var sendButton = $('#sendButton');
-  var commentBox = $('#commentBox');
-  var comments = $('#comments');
+  var messageBox = $('#messageBox');
+  var messages = $('#messages');
 
   sendButton.on('click', function(){
-    var data = commentBox.val();
-    console.log("sndButton click (comment -> %o)", data);
-    socket.emit('comment', data);
+    var data = messageBox.val();
+    console.log("sndButton click (message -> %o)", data);
+    socket.emit('message', data);
+    messageBox.val("");
   });
 
   socket.on('broadcast', function(data){
     console.log("broadcast receive -> %o", data);
-    comments.append("<li>" + data + "</li>");
+    messages.append("<li>" + data + "</li>");
   });
 });

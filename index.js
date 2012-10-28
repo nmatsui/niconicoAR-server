@@ -44,8 +44,8 @@ io.configure(function(){
 
 io.sockets.on('connection', function(socket){
   console.log("client connect");
-  socket.on('comment', function(data){
-    console.log("receive comment -> %j", data);
+  socket.on('message', function(data){
+    console.log("receive message -> %j", data);
     io.sockets.emit('broadcast', data);
   });
   socket.on('disconnect', function(){
