@@ -7,7 +7,7 @@ Public PaaSで動作できるように、xhr-pollingで動作する。([eXcale](
 
 License
 -------
-Copyright &copy; 2012 Nobuyuki Matsui (nobuyyki.matsui@gmail.com)
+Copyright &copy; 2012 Nobuyuki Matsui (nobuyuki.matsui@gmail.com)
 
 Distributed under the [MIT License][mit].
 [MIT]:http://rem.mit-license.org
